@@ -1,53 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Costum CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <!-- AOS Animate -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Boxicons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
     <!-- Icon -->
-    <link rel="icon" href="assets/img/logo.svg">
-    <title>Foodly - Landing Page</title>
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <title>FtrTech | Partner Handal untuk Solusi Digital dan Joki Coding</title>
 </head>
+
 <body>
     <!-- Navbar Section Open -->
-    <nav class="navbar navbar-expand-lg sticky-top bg-white">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.svg" class="me-3" alt="brand">
-                <span class="text-dark">Foodly</span>
-            </a>
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class='bx bx-menu'></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#menu">Menu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#newslatter">Newslatter</a>
-                    </li>
-                </ul>
-                <a href="" class="btn btn-primary shadow-none">Contact</a>
-            </div>
+    <nav class="bg-white navbar navbar-expand-lg sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+          <!-- Mobile View: Hamburger + Logo -->
+          <div class="d-flex align-items-center">
+              <button class="shadow-none navbar-toggler d-lg-none me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                  <i class="bx bx-menu"></i>
+              </button>
+              <a class="navbar-brand d-flex align-items-center" href="#">
+                  <img src="assets/img/logos.png" class="me-2" alt="brand" style="height: 50px; width: auto;" />
+                  <span class="text-dark fw-bold" style="font-style: italic;">FtrTech</span>
+              </a>
+          </div>
+          <!-- Mobile View: "Pesan Sekarang" -->
+          <a href="#pesan-sekarang" class="shadow-none btn btn-primary btn-sm d-lg-none">Pesan Sekarang</a>
+  
+          <!-- Desktop Menu -->
+          <div class="collapse navbar-collapse d-none d-lg-flex justify-content-end" id="desktopNavbar">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#home">Beranda</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#about">Tentang Kami</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#marketplace">Marketplace</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">FAQ</a>
+                  </li>
+              </ul>
+              <a href="#pesan-sekarang" class="shadow-none btn btn-primary ms-3">Pesan Sekarang</a>
+          </div>
+      </div>
+  
+      <!-- Mobile Menu Offcanvas -->
+      <div class="offcanvas offcanvas-start half-screen" tabindex="-1" id="navbarNav" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="assets/img/logos.png" class="me-2" alt="brand" style="height: 50px; width: auto;" />
+            <span class="text-dark fw-bold" style="font-style: italic;">FtrTech</span>
+        </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </nav>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#marketplace">Marketplace</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+  </nav>
+  
+  
     <!-- Navbar Section Close -->
 
     <!-- Home Section Open -->
@@ -56,26 +93,27 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
                     <div class="home-content" data-aos="fade-up" data-aos-duration="1000">
-                        <p class="badge fs-6 fw-normal bg-primary-light text-primary"> You have to try it 😋</p>
-                        <h1 class="text-home-bold fw-bold text-dark mt-1">
-                            For you, we serve the best food & <span class="text-primary">delicious</span>
-                        </h1>
+                        <p class="badge fs-6 fw-normal bg-primary-light">
+                            You have to try it 😋
+                        </p>
+                        <h5 class="text-home-bold fw-bold text-dark">
+                            Untuk Anda, kami hadirkan solusi coding terbaik dan
+                            <span class="text-primary">terampil.</span>
+                        </h5>
                         <h4 class="text-home-reguler fw-normal text-secondary">
-                            We found a concept that fits and deserves to be served in a restaurant so that people can
-                            feel it!
+                            Kami hadir untuk pendekatan yang tepat menyelesaikan tugas
+                            pemrograman Anda, memastikan hasil yang memuaskan dan sesuai
+                            kebutuhan!
                         </h4>
-                        <div class="home-btn mt-5">
-                            <a href="#" class="btn btn-primary shadow-none">Order now</a>
-                            <a href="#" class="btn btn-video-play">
-                                <i class='bx bx-play'></i>
+                        <div class="mt-5 home-btn">
+                            <a href="#pesan-sekarang" class="shadow-none btn btn-primary">Pesan Sekarang</a>
                             </a>
-                            <span class="video-play text-dark">See video</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="home-img" data-aos="fade-up" data-aos-duration="2000">
-                        <img src="assets/img/home-img.svg" class="w-100" alt="">
+                        <img src="assets/img/hero1.jpg" class="w-100" alt="" />
                     </div>
                 </div>
             </div>
@@ -84,30 +122,41 @@
     <!-- Home Section Close -->
 
     <!-- Services Section Open -->
-    <section class="services text-center">
+    <section class="text-center services">
         <div class="container">
-            <span class="text-primary">Services</span>
-            <h2 class="fw-bold text-dark mt-3">Our best services</h2>
+            <h3 class="text-primary fw-bold">Layanan</h3>
+            <span class="mt-3 fw-bold">Kami siap membantu Anda mencapai tujuan coding dengan cepat dan
+                efektif!</span>
             <div class="row">
-                <div class="col-lg-4 col-md-6 content mt-5" data-aos="fade-up" data-aos-duration="1000">
-                    <img src="assets/img/services-1.svg" alt="">
-                    <h5 class="services-title text-dark mt-4">Fastest delivery</h5>
-                    <p class="text-secondary mt-3">We can deliver delicious ready-to-eat meals quickly to your
-                        doorstep.
+                <div class="mt-5 col-lg-4 col-md-6 content" data-aos="fade-up" data-aos-duration="1000">
+                    <img src="assets/img/services-1.jpg" style="width: 60%; height: auto;" alt="" />
+                    <h5 class="mt-4 services-title text-dark">
+                        Penyelesaian Tugas Pemrograman
+                    </h5>
+                    <p class="mt-3 text-secondary">
+                        Membantu menyelesaikan tugas coding seperti algoritma, pembuatan
+                        RESTful API, debugging, atau optimasi kode.
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-6 content mt-5" data-aos="fade-up" data-aos-duration="2000">
-                    <img src="assets/img/services-2.svg" alt="">
-                    <h5 class="services-title text-dark mt-4">Affordable prices</h5>
-                    <p class="text-secondary mt-3">Every food we provide has an affordable price and according to
-                        taste.
+                <div class="mt-5 col-lg-4 col-md-6 content" data-aos="fade-up" data-aos-duration="2000">
+                    <img src="assets/img/services-2.jpg" style="width: 60%; height: auto;"  alt="" />
+                    <h5 class="mt-4 services-title text-dark">Pengembangan Website</h5>
+                    <p class="mt-3 text-secondary">
+                        Kami menyediakan layanan pengembangan web end-to-end, mulai dari
+                        desain, pengembangan, hingga implementasi website yang responsif
+                        dan user-friendly.
                     </p>
                 </div>
-                <div class="col-lg-4 col-md-6 content mt-5" data-aos="fade-up" data-aos-duration="3000">
-                    <img src="assets/img/services-3.svg" alt="">
-                    <h5 class="services-title text-dark mt-4">Delicious & hygienic</h5>
-                    <p class="text-secondary mt-3">In every food, we serve it with the best recipe so that it tastes
-                        good.</p>
+                <div class="mt-5 col-lg-4 col-md-6 content" data-aos="fade-up" data-aos-duration="3000">
+                    <img src="assets/img/services-3.jpg"  style="width: 60%; height: auto;"  alt="" />
+                    <h5 class="mt-4 services-title text-dark">
+                        Konsultasi dan Perbaikan Kode
+                    </h5>
+                    <p class="mt-3 text-secondary">
+                        Memberikan solusi untuk masalah pada kode Anda, mulai dari error
+                        handling, performa, hingga pengembangan fitur tambahan sesuai
+                        kebutuhan.
+                    </p>
                 </div>
             </div>
         </div>
@@ -121,22 +170,18 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="row">
                         <div class="col-md-11">
-                            <div class="gallery-img mt-3" data-aos="fade-up" data-aos-duration="1000">
-                                <img src="assets/img/about-img.svg" class="w-100" alt="">
+                            <div class="mt-3 gallery-img" data-aos="fade-up" data-aos-duration="1000">
+                                <img src="assets/img/about-1.jpg" class="w-100" alt="" />
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="about-content" data-aos="fade-up" data-aos-duration="2000">
-                        <span class="text-primary">About</span>
-                        <h2 class="fw-bold text-dark mt-3">Food gallery on our menu</h2>
-                        <p class="text-secondary mt-3">
-                            Our food gallery contains a collection of pictures that we take
-                            when customers order food, we have a large selection of delicious food and drinks with
-                            various variants and affordable prices, you can see them here.
+                      <h3 class="text-primary fw-bold">Tentang Kami</h3>
+                        <p class="mt-3 text-secondary">
+                          FtrTech hadir untuk membantu mencapai tujuan digital Anda dengan teknologi yang tepat dan dukungan penuh dari tim kami. Kami mengutamakan inovasi dan kualitas dalam setiap solusi digital yang kami tawarkan. Berdiri dengan visi untuk membawa transformasi digital yang menyeluruh bagi berbagai bisnis, kami hadir untuk memenuhi kebutuhan pengembangan website, aplikasi,dan layanan Joki Coding yang dapat membantu Anda menyelesaikan tugas-tugas pengembangan software dengan profesional. <br><br>
                         </p>
-                        <a href="#" class="btn btn-primary shadow-none mt-5">Load more</a>
                     </div>
                 </div>
             </div>
@@ -145,88 +190,133 @@
     <!-- About Section Close -->
 
     <!-- Menu Section Open -->
-    <section class="menu" id="menu">
-        <div class="container">
-            <span class="text-primary">Our menu</span>
-            <h2 class="fw-bold text-dark mt-3">Menu of the week</h2>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-menu bg-white mt-3" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="item">
-                            <img src="assets/img/menu-1.svg" alt="">
-                            <h5 class="menu-title text-dark mt-3">Pancake fluffy</h5>
-                            <p class="text-secondary mt-2">With caramel and extra honey</p>
-                            <h4 class="text-primary fw-bold mt-4">$20.00</h4>
-                            <a href="#" class="btn btn-cart shadow-none text-white bg-primary"><i class='bx bx-cart fs-5'></i></a>
-                        </div>
+    <section class="menu" id="marketplace">
+      <div class="container">
+          <h3 class="text-primary fw-bold">Project Untukmu</h3>
+          <span class="mt-3 fw-bold">Kami menyediakan project siap pakai untuk memenuhi kebutuhan Tugas maupun Aplikasi yang anda butuhkan.</span>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3 bg-white card-menu" data-aos="fade-up" data-aos-duration="1000">
+                  <a href="">
+                    <div class="item">
+                        <img src="assets/img/lib1.png" alt="" />
+                        <h6 class="mt-3 menu-title text-dark">Perpustakaan digital</h6>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/la1.png" alt=""> Laravel
+                        </span>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/bo1.png" alt=""> Bootstrap
+                        </span>
+                        <h5 class="mt-2 text-muted original-price">Rp 250.000</h5>
+                        <h5 class="mt-4 text-dark fw-bold">Rp 200.000</h5>
+                        <a href="#" class="text-white shadow-none btn btn-cart bg-primary"><i
+                                class="bx bx-cart fs-5"></i></a>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-menu bg-white mt-3" data-aos="fade-up" data-aos-duration="2000">
-                        <div class="item">
-                            <img src="assets/img/menu-2.svg" alt="">
-                            <h5 class="menu-title text-dark mt-3">Veggie fried rice</h5>
-                            <p class="text-secondary mt-2">With celery and half-boiled eggs</p>
-                            <h4 class="text-primary fw-bold mt-4">$18.50</h4>
-                            <a href="#" class="btn btn-cart shadow-none text-white bg-primary"><i class='bx bx-cart fs-5'></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="card-menu bg-white mt-3" data-aos="fade-up" data-aos-duration="3000">
-                        <div class="item">
-                            <img src="assets/img/menu-3.svg" alt="">
-                            <h5 class="menu-title text-dark mt-3">Meat egg rice</h5>
-                            <p class="text-secondary mt-2">With different meat variations</p>
-                            <h4 class="text-primary fw-bold mt-4">$35.99</h4>
-                            <a href="#" class="btn btn-cart shadow-none text-white bg-primary"><i class='bx bx-cart fs-5'></i></a>
-                        </div>
-                    </div>
+                  </a>
                 </div>
             </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3 bg-white card-menu" data-aos="fade-up" data-aos-duration="2000">
+                  <a href="">                    <div class="item">
+                        <img src="assets/img/pkl1.png" alt="" />
+                        <h6 class="mt-3 menu-title text-dark">SIMPATIK (Sistem Monitoring Praktik Kerja Terintegrasi dan Komprehensif)</h6>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/la1.png" alt=""> Laravel
+                        </span>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/bo1.png" alt=""> Bootstrap
+                        </span>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/jk1.png" alt=""> JQuery
+                        </span>
+                        <h5 class="mt-2 text-muted original-price">Rp 400.000</h5>
+                        <h5 class="mt-4 text-dark fw-bold">Rp 280.000</h5>
+                        <a href="#" class="text-white shadow-none btn btn-cart bg-primary"><i
+                                class="bx bx-cart fs-5"></i></a>
+                    </div>
+                  </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="mt-3 bg-white card-menu" data-aos="fade-up" data-aos-duration="3000">
+                  <a href="">
+                    <div class="item">
+                        <img src="assets/img/lau1.png" alt="" />
+                        <h6 class="mt-3 menu-title text-dark">KilatCuci Laundry</h6>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/la1.png" alt=""> Laravel
+                        </span>
+                        <span class="badge-programming-language">
+                          <img src="assets/img/bo1.png" alt=""> Bootstrap
+                        </span>
+                        <h5 class="mt-2 text-muted original-price">Rp 200.000</h5>
+                        <h5 class="mt-4 text-dark fw-bold">Rp 150.000</h5>
+                        <a href="#" class="text-white shadow-none btn btn-cart bg-primary"><i
+                                class="bx bx-cart fs-5"></i>
+                        </a>
+                    </div>                    
+                  </a>                  
+                </div>
+               
+            </div>           
         </div>
-    </section>
+      </div>
+  </section>
+  
+
+   
     <!-- Menu Section Close -->
 
     <!-- Testimonials Section Open -->
-    <section class="testimonials text-center">
+    <!-- <section class="text-center testimonials">
         <div class="container">
             <span class="text-primary">Testimonials</span>
-            <h2 class="fw-bold text-dark mt-3">What our customers say?</h2>
+            <h2 class="mt-3 fw-bold text-dark">What our customers say?</h2>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                class="active rounded-circle bg-primary" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="rounded-circle bg-primary"
-                                aria-label="Slide 2"></button>
+                                class="active rounded-circle bg-primary" aria-current="true"
+                                aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                class="rounded-circle bg-primary" aria-label="Slide 2"></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="content-testimonials mt-5" data-aos="fade-up" data-aos-duration="1000">
-                                    <img class="rounded-circle" src="assets/img/img-testimonials-1.svg" style="width: 80px;">
-                                    <h5 class="name-testimonials text-dark mt-3">Ananda Ayu Gempita</h5>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star-half'></i>
-                                    <p class="text-secondary mt-3">I love the food here. The atmosphere is
-                                        comfortable and every time I come here it is always crowded with people.</p>
+                                <div class="mt-5 content-testimonials" data-aos="fade-up" data-aos-duration="1000">
+                                    <img class="rounded-circle" src="assets/img/img-testimonials-1.svg"
+                                        style="width: 80px" />
+                                    <h5 class="mt-3 name-testimonials text-dark">
+                                        Ananda Ayu Gempita
+                                    </h5>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star-half"></i>
+                                    <p class="mt-3 text-secondary">
+                                        I love the food here. The atmosphere is comfortable and
+                                        every time I come here it is always crowded with people.
+                                    </p>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="content-testimonials mt-5" data-aos="fade-up" data-aos-duration="1000">
-                                    <img class="rounded-circle" src="assets/img/img-testimonials-2.svg" style="width: 80px;">
-                                    <h5 class="name-testimonials text-dark mt-3">Alya Farhana</h5>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <i class='bx bxs-star'></i>
-                                    <p class="text-secondary mt-3">I really like the food here, it's delicious
-                                        and the price is very affordable. I often come here with my friends on
-                                        weekends. Love it!</p>
+                                <div class="mt-5 content-testimonials" data-aos="fade-up" data-aos-duration="1000">
+                                    <img class="rounded-circle" src="assets/img/img-testimonials-2.svg"
+                                        style="width: 80px" />
+                                    <h5 class="mt-3 name-testimonials text-dark">
+                                        Alya Farhana
+                                    </h5>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <i class="bx bxs-star"></i>
+                                    <p class="mt-3 text-secondary">
+                                        I really like the food here, it's delicious and the price
+                                        is very affordable. I often come here with my friends on
+                                        weekends. Love it!
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -234,12 +324,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Testimonials Section Close -->
 
-
     <!-- Gallery Section Open -->
-    <section class="gallery" id="gallery">
+    <!-- <section class="gallery" id="gallery">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12">
@@ -247,45 +336,137 @@
                         <div class="col-md-11">
                             <div class="gallery-content" data-aos="fade-up" data-aos-duration="1000">
                                 <span class="text-primary">Gallery</span>
-                                <h2 class="fw-bold text-dark mt-3">Food gallery on our menu</h2>
-                                <p class="text-secondary mt-3">
-                                    Our food gallery contains a collection of pictures that we take
-                                    when customers order food, we have a large selection of delicious food and drinks with
-                                    various variants and affordable prices, you can see them here.
+                                <h2 class="mt-3 fw-bold text-dark">
+                                    Food gallery on our menu
+                                </h2>
+                                <p class="mt-3 text-secondary">
+                                    Our food gallery contains a collection of pictures that we
+                                    take when customers order food, we have a large selection of
+                                    delicious food and drinks with various variants and
+                                    affordable prices, you can see them here.
                                 </p>
-                                <a href="#" class="btn btn-primary shadow-none mt-5">Load more</a>
+                                <a href="#" class="mt-5 shadow-none btn btn-primary">Load more</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="gallery-img" data-aos="fade-up" data-aos-duration="2000">
-                        <img src="assets/img/gallery-img.svg" class="w-100" alt="">
+                        <img src="assets/img/gallery-img.svg" class="w-100" alt="" />
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Gallery Section Close -->
 
-
     <!-- Newslatter Section Open -->
-    <section class="newslatter" id="newslatter">
+    <section class="newslatter" id="pesan-sekarang">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="newslatter-content bg-primary text-center" data-aos="fade-up" data-aos-duration="1000">
-                        <h2 class="title-newslatter fw-bold text-white">Hurry up! Subscribe our newslatter and get 25% off</h2>
-                        <p class="text-white mt-3">Limited time offer for this month. No credit card required</p>
-                        <div class="form-newslatter mt-5">
-                            <input type="email" class="form-control w-50 shadow-none" placeholder="elfiranurul02@gmail.com">
-                            <a href="#" class="btn btn-primary-light shadow-none">Subscribe</a>
+          <div class="card-small">
+            <a href="https://api.whatsapp.com/send?phone=6285179584795&text=Halo%2C%20saya%20mau%20diskusi%20langsung%20via%20WhatsApp"
+               target="_blank">Skip, Mau diskusi langsung via WhatsApp aja.</a>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="newslatter-content bg-light p-4 rounded shadow-lg" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="text-center text-primary fw-bold mb-4">Halo Tuan, Ayo isi kebutuhanmu!</h2>
+      
+                <div class="form-wizard">
+                  <!-- Step Navigation -->
+                  <ul class="wizard-steps">
+                    <li class="active" data-step="1">
+                      <i class="bx bx-task"></i>
+                    </li>
+                    <li data-step="2">
+                      <i class="bx bx-pencil"></i>
+                    </li>
+                    <li data-step="3">
+                      <i class="bx bx-calendar"></i>
+                    </li>
+                  </ul>
+      
+                  <!-- Form Steps -->
+                  <form id="projectWizard" action="#" method="post">
+                    <!-- Step 1: Jenis Project -->
+                    <div class="step" data-step="1">
+                      <h3 class="step-title">Pilih Jenis Project</h3>
+                      <div class="row justify-content-center">
+                        <div class="col-md-3 mb-3">
+                          <div class="card project-card" data-value="website">
+                            <div class="card-body">
+                              <i class="bx bx-globe fs-1 text-primary"></i>
+                              <h5 class="card-title">Website</h5>
+                              <p class="card-text">Pembuatan aplikasi berbasis web.</p>
+                            </div>
+                          </div>
                         </div>
+                        <div class="col-md-3 mb-3">
+                          <div class="card project-card"  data-value="mobileApp">
+                            <div class="card-body">
+                              <i class="bx bx-code fs-1 text-success"></i>
+                              <h5 class="card-title">Joki Tugas Coding</h5>
+                              <p class="card-text">Joki tugas coding dengan berbagai bahasa pemrograman.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <div class="card project-card" data-value="desktopApp">
+                            <div class="card-body">
+                              <i class="bx bx-bug fs-1 text-danger"></i>
+                              <h5 class="card-title">Konsultasi & Fix Bug</h5>
+                              <p class="card-text">Konsultasi terkait error dan perbaikan bug.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+      
+                    <!-- Step 2: Deskripsi Project -->
+                    <div class="step" data-step="2" style="display: none;">
+                      <h3 class="step-title">Deskripsi Project</h3>
+                      <label for="projectDescription">Jelaskan Project Anda:</label>
+                      <textarea id="projectDescription" name="projectDescription" rows="4" class="form-control" required></textarea>
+                      <button type="button" class="prev-step">Previous</button>
+                      <button type="button" class="next-step">Next</button>
+                    </div>
+      
+                    <!-- Step 3: Deadline Project -->
+                    <div class="step" data-step="3" style="display: none;">
+                    <div class="deadline-section">
+                      <h3 class="step-title">Deadline Proyek</h3>
+                      <p>Kapan proyek ini harus diselesaikan?</p>
+                    
+                      <div class="deadline-options">
+                        <!-- Input tanggal -->
+                        <div class="deadline-card date-card" data-type="date">
+                          <label for="deadlineDate" class="card-label">
+                            <input
+                              type="date"
+                              id="deadlineDate"
+                              name="deadline"
+                              class="form-control"
+                            />
+                          </label>
+                        </div>
+                    
+                        <!-- Opsi fleksibel -->
+                        <div class="deadline-card flexible-card" data-type="flexible">
+                          <span>Deadline saya fleksibel</span>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
+      
+    
     <!-- Newslatter Section Close -->
 
     <!-- Footer Section Open -->
@@ -294,12 +475,12 @@
             <div class="row justify-content-between">
                 <div class="col-md-5">
                     <div class="col-md-10">
-                        <a href="#" class="footer-brand">
-                            <img src="assets/img/logo.svg" class="me-3" alt="brand">
-                            <span class="text-dark">Foodly</span>
-                            <p class="text-secondary mt-3">Foodly is a restaurant that has been around since 1988 in
-                                South Jakarta. We serve the best quality food for you.</p>
-                        </a>
+                            <img src="assets/img/logos.png" class="me-3" alt="brand"
+                                style="height: 70px; width: auto;" />
+                            <span class="text-dark fw-bold" style="font-style: italic;">FtrTech</span>
+                            <p class="mt-3 text-secondary">
+                              FtrTech adalah pilihan tepat bagi Anda yang ingin mewujudkan ide bisnis ke dalam solusi digital berkualitas yang berdampak. Kami juga siap membantu Anda dalam menyelesaikan tugas pengembangan perangkat lunak melalui layanan Joki Coding yang efisien dan profesional. Dengan dukungan tim ahli kami, Anda dapat fokus pada aspek strategis bisnis Anda, sementara kami menangani segala kebutuhan teknis yang Anda hadapi.
+                            </p>
                     </div>
                 </div>
                 <div class="col-md-7">
@@ -307,40 +488,42 @@
                         <div class="col-md-3">
                             <div class="footer-content">
                                 <span>Services</span>
-                                <ul class="footer-link mt-3 list-unstyled">
-                                    <li><a href="#" class="py-1 d-block">Delivery</a></li>
-                                    <li><a href="#" class="py-1 d-block">Pricing</a></li>
-                                    <li><a href="#" class="py-1 d-block">Fast food</a></li>
+                                <ul class="mt-3 footer-link list-unstyled">
+                                    <li> <i class="bx bx-shopping-bag fs-5"></i><a href="#marketplace" class="py-1 d-block">Marketplace</a></li>
+                                    <li> <i class="bx bx-menu fs-5"></i><a href="#about" class="py-1 d-block">Tentang Kami</a></li>
+                                    <li> <i class="bx bx-error-circle fs-5"></i><a href="#" class="py-1 d-block">FAQ</a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="footer-content">
-                                <span>Info</span>
-                                <ul class="footer-link mt-3 list-unstyled">
-                                    <li><a href="#" class="py-1 d-block">Promo date</a></li>
-                                    <li><a href="#" class="py-1 d-block">Event</a></li>
-                                    <li><a href="#" class="py-1 d-block">Careers</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                         <div class="col-md-5">
                             <div class="footer-content">
                                 <span>Contact</span>
-                                <ul class="footer-link mt-3 list-unstyled">
-                                    <li><a href="#" class="py-1 d-block">South Jakarta - Indonesia</a></li>
-                                    <li><a href="#" class="py-1 d-block">+0628-2267-9981</a></li>
-                                    <li><a href="#" class="py-1 d-block">contact@foodly.co.id</a></li>
+                                
+                                <ul class="mt-3 footer-link list-unstyled">
+                                  <li>
+                                    <i class="bx bx-map fs-5"></i><a href="https://maps.app.goo.gl/YtdngBvjf39jJwHE8" class="py-1 d-block" target="_blank">Purwasari,Kec. Cisayong, Kabupaten Tasikmalaya, Jawa Barat 46153</a>
+                                  </li>
+                                  <li>
+                                    <i class="bx bx-phone fs-5"></i><a href="https://api.whatsapp.com/send?phone=6285179584795&text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20yang%20ditawarkan%20FtrTech.%20" class="py-1 d-block" target="_blank">+62 851-7958-4795</a>
+                                  </li>
+                                  <li>
+                                    <i class="bx bx-envelope fs-5"></i><a href="#" class="py-1 d-block">ftrtech24@gmail.com</a>
+                                  </li>
+                                  <li>
+                                    <i class="bx bx-conversation fs-5"></i><a href="#" class="py-1 d-block">Layanan Pengaduan & Saran</a>
+                                  </li>
                                 </ul>
+                                
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <p class="copyright text-secondary text-center">
-                    Copyright &copy; 2022 All rights reserved | By
-                    <a class="text-primary" href="https://ilmaelfiraa.github.io">Elfira Nurul Ilma</a>
+            <div class="mt-5 row">
+                <p class="text-center copyright text-secondary">
+                    Copyright &copy; 2024 All rights reserved | By
+                    <a class="text-primary" href="https://sakibftrrhmn.vercel.app/">FtrTech</a>
                 </p>
             </div>
         </div>
@@ -355,8 +538,8 @@
 
     <!-- Add Drop Shadow on Scroll -->
     <script>
-        window.addEventListener('scroll', (e) => {
-            const nav = document.querySelector('.navbar');
+        window.addEventListener("scroll", (e) => {
+            const nav = document.querySelector(".navbar");
             if (window.pageYOffset > 0) {
                 nav.classList.add("drop-shadow");
             } else {
@@ -368,6 +551,8 @@
     <script>
         AOS.init();
     </script>
+
+   <script src="assets/js/script.js"></script>
 
 </body>
 

@@ -3,14 +3,14 @@
 /* Variables CSS */
 :root {
   /* Colors */
-  --primary-color: #BA2530;
-  --primary-light-color: #FFD6D7;
-  --yellow-color: #FEC65E;
-  --white-color: #FFFFFF;
+  --primary-color: #7704c8;
+  --primary-light-color: #7704c8;
+  --yellow-color: #fec65e;
+  --white-color: #ffffff;
   --black-color: #323232;
   /* Font & Typography */
   --body-font: "Poppins", sans-serif;
-  --biggest-font-size: 58px;
+  --biggest-font-size: 45px;
   --h1-font-size: 45px;
   --normal-font-size: 18px;
   --small-font-size: 16px;
@@ -67,7 +67,8 @@ a:hover {
   background-color: var(--primary-color);
   border: none;
 }
-.btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover,
+.btn-primary:focus {
   filter: drop-shadow(0px 10px 30px rgba(186, 37, 48, 0.15));
   background-color: var(--primary-color);
 }
@@ -77,7 +78,8 @@ a:hover {
   color: var(--primary-color);
   border: none;
 }
-.btn-primary-light:hover, .btn-primary-light:focus {
+.btn-primary-light:hover,
+.btn-primary-light:focus {
   color: var(--black-color);
   background-color: var(--primary-light-color);
 }
@@ -128,7 +130,8 @@ a:hover {
   font-weight: var(--font-medium);
   color: var(--black-color);
 }
-.navbar .nav-link:hover, .navbar .nav-link:focus {
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
   color: var(--primary-color);
 }
 .navbar .nav-link .active {
@@ -137,6 +140,98 @@ a:hover {
 
 .drop-shadow {
   box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.04);
+}
+
+/* Default styles */
+.navbar-toggler {
+  border: none;
+  background: transparent;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    margin-right: 10px;
+  }
+
+  /* Offcanvas hanya setengah layar */
+  .offcanvas.half-screen {
+    width: 50%; /* Hanya setengah layar */
+    max-width: 300px; /* Batas maksimal lebar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .offcanvas.half-screen .offcanvas-body {
+    padding: 1rem;
+  }
+
+  /* Responsif untuk layar sangat kecil */
+  @media (max-width: 576px) {
+    .offcanvas.half-screen {
+      width: 70%; /* Lebar menjadi 70% untuk layar kecil */
+    }
+  }
+
+  /* Animasi dan posisi offcanvas */
+  .offcanvas {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .offcanvas.offcanvas-start {
+    transform: translateX(-100%);
+  }
+
+  .offcanvas.show {
+    transform: translateX(0);
+  }
+
+  /* Tombol "Pesan Sekarang" */
+  .btn-sm {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Sembunyikan menu desktop */
+  #desktopNavbar {
+    display: none !important;
+  }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 992px) {
+  /* Offcanvas tidak aktif di desktop */
+  #navbarNav {
+    display: none !important;
+  }
+
+  /* Navigasi desktop */
+  .collapse.navbar-collapse {
+    display: flex !important;
+    justify-content: end;
+  }
+
+  .navbar-nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .btn {
+    margin-left: 1rem;
+  }
 }
 
 /* Home */
@@ -172,18 +267,51 @@ section.about {
 /* Menu */
 section.menu {
   padding-top: 7rem;
+  padding-bottom: 7rem;
 }
+
 section.menu .card-menu {
   filter: drop-shadow(0px 5.42857px 40.7143px rgba(0, 0, 0, 0.05));
   border-radius: 10px;
   padding: 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+section.menu .card-menu:hover {
+  transform: translateY(-10px); /* Mengangkat card saat hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+}
+
 section.menu .card-menu .item {
   position: relative;
 }
+section.menu .card-menu .item .original-price {
+  font-size: 0.9rem; /* Ukuran kecil */
+  text-decoration: line-through; /* Garis coretan */
+  color: #888; /* Warna abu-abu untuk harga dicoret */
+}
+
+section.menu .card-menu .item .badge-programming-language {
+  display: inline-block;
+  background-color: transparent; /* Latar belakang transparan */
+  color: #7704c8; /* Warna teks badge */
+  padding: 0.3rem 0.8rem;
+  border: 2px solid #7704c8; /* Garis tepi badge */
+  border-radius: 50px; /* Membuat bentuk elips */
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+section.menu .card-menu .item .badge-programming-language img {
+  width: 1.5rem; /* Ukuran logo */
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
 section.menu .card-menu .item img {
   width: 100%;
 }
+
 section.menu .card-menu .item .menu-title {
   font-weight: var(--font-semibold);
 }
@@ -215,52 +343,506 @@ section.gallery {
   padding-top: 8rem;
 }
 
-/* Newslatter */
+/* General Section Styling */
 section.newslatter {
   padding-top: 7rem;
-}
-section.newslatter .newslatter-content {
-  padding: 6rem;
+  padding-bottom: 3rem;
+  background-color: var(--primary-color);
   border-radius: 10px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
-section.newslatter .newslatter-content .form-newslatter {
+
+/* Animasi Floating untuk Card */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0); /* Posisi awal */
+  }
+  50% {
+    transform: translateY(-10px); /* Melayang sedikit ke atas */
+  }
+}
+
+/* Styling Card Kecil (Skip WhatsApp) */
+.card-small {
+  position: absolute;
+  top: -20px; /* Posisi card di atas section */
+  right: 20px; /* Geser ke kanan */
+  background-color: #ffffff; /* Latar belakang putih */
+  border: 2px solid var(--primary-color); /* Border sesuai tema */
+  border-radius: 10px; /* Sudut membulat */
+  padding: 10px 15px; /* Spasi dalam */
+  font-size: 0.9rem; /* Ukuran teks */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan */
+  font-weight: 500;
+  z-index: 10;
+  text-align: center; /* Teks rata tengah */
+  animation: float 3s ease-in-out infinite; /* Terapkan animasi mengambang */
+}
+
+/* Styling Link dalam Card Kecil */
+.card-small a {
+  color: var(--primary-color); /* Warna teks sesuai tema */
+  text-decoration: none; /* Hilangkan garis bawah */
+  font-weight: bold;
+}
+
+.card-small a:hover {
+  text-decoration: underline; /* Garis bawah saat hover */
+}
+/* Wizard Steps */
+.wizard-steps {
   display: flex;
   justify-content: center;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding: 0;
 }
-section.newslatter .newslatter-content .form-newslatter input.form-control {
-  border-radius: 10px !important;
+
+@media (max-width: 768px) {
+  .card-small {
+    top: -10px; /* Sesuaikan posisi untuk layar kecil */
+    right: 10px;
+    padding: 8px 12px; /* Perkecil padding */
+    font-size: 0.8rem; /* Ukuran teks lebih kecil */
+  }
+}
+
+.wizard-steps li {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.wizard-steps li.active {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.wizard-steps li i {
+  font-size: 1.5rem;
+}
+
+/* Project Card */
+.project-card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Steps */
+.step {
+  display: none;
+}
+
+.step.active {
+  display: block;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .wizard-steps {
+    flex-wrap: wrap;
+  }
+  .wizard-steps li {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Project Card */
+.project-card {
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-card h5 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Form Step */
+.step {
+  display: none;
+  text-align: center;
+}
+
+.step.active {
+  display: block;
+}
+
+.step-title {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.step button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
   border: none;
-  margin-right: 1rem;
-  padding: 1rem;
-  height: 3.3rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-section.newslatter .newslatter-content .form-newslatter input.form-control::-moz-placeholder {
-  font-size: 15px !important;
+
+.step button:hover {
+  background-color: #0056b3;
 }
-section.newslatter .newslatter-content .form-newslatter input.form-control:-ms-input-placeholder {
-  font-size: 15px !important;
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  section.newslatter {
+    width: 90%;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .wizard-steps {
+    justify-content: space-between; /* Wizard steps sejajar */
+    gap: 0; /* Hilangkan jarak ekstra */
+  }
+
+  .wizard-steps li {
+    flex: 1;
+    max-width: 60px;
+    margin: 0 5px;
+    border-radius: 60%;
+  }
+
+  .wizard-steps li span {
+    bottom: -15px; /* Perbaiki posisi teks */
+  }
+
+  .project-card {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .project-card i {
+    font-size: 1.5rem;
+  }
+
+  .project-card h5 {
+    font-size: 1rem;
+  }
+
+  .project-card p {
+    font-size: 0.8rem;
+  }
+
+  .step-title {
+    font-size: 1.3rem;
+  }
+
+  .step button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
 }
-section.newslatter .newslatter-content .form-newslatter input.form-control::placeholder {
-  font-size: 15px !important;
+
+@media (max-width: 576px) {
+  section.newslatter {
+    padding-top: 4rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .wizard-steps li {
+    width: 50px;
+    height: 50px;
+  }
+
+  .wizard-steps li i {
+    font-size: 1.2rem;
+  }
+
+  .wizard-steps li span {
+    font-size: 0.75rem;
+    bottom: -12px;
+  }
+
+  .project-card {
+    padding: 0.8rem;
+  }
+
+  .project-card i {
+    font-size: 1.4rem;
+  }
+
+  .project-card h5 {
+    font-size: 0.9rem;
+  }
+
+  .project-card p {
+    font-size: 0.75rem;
+  }
+
+  .step button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+.deadline-section {
+  text-align: center;
+  color: #070707;
+}
+
+.deadline-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Card dasar */
+.deadline-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Card aktif (ketika dipilih) */
+.deadline-card.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
+/* Hover efek */
+.deadline-card:hover {
+  transform: scale(1.05);
+}
+
+/* Atur tampilan input date */
+.deadline-card input[type="date"] {
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Input tanggal */
+input[type="date"] {
+  border: none;
+  outline: none;
+  text-align: center;
+  width: 100%;
+  background: none;
+  font-size: 1rem;
+  color: #fff;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+/* Card fleksibel */
+.flexible-card {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Button Styling */
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 5px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Media Queries untuk mobile */
+@media (max-width: 768px) {
+  .wizard-steps {
+    flex-wrap: nowrap; /* Tetap sejajar ke samping */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wizard-steps li {
+    margin: 0 5px; /* Atur jarak antar item */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Ukuran icon */
+    height: 50px; /* Bikin jadi bulat */
+    border-radius: 50%; /* Membuat icon bulat */
+    position: relative;
+  }
+
+  /* Garis di tengah hanya muncul di mode desktop */
+  .wizard-steps li::after {
+    content: "";
+    display: none; /* Hilangkan garis vertikal */
+  }
+
+  /* Wizard aktif di mobile */
+  .wizard-steps li.active {
+    background-color: var(--primary-color); /* Warna active */
+    color: white;
+  }
+
+  .deadline-options {
+    flex-direction: column;
+    justify-content: center; /* Mengatur elemen ke tengah */
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
 }
 
 /* Footer */
 footer.footer-section {
-  padding-top: 10rem;
+  padding-top: 5rem; /* Kurangi padding untuk menghindari jarak kosong terlalu besar */
+  padding-bottom: 3rem; /* Tambahkan padding bawah */
+  background-color: #f9f9f9; /* Tambahkan warna background untuk kontras */
 }
+
 footer.footer-section .footer-brand span {
-  font-weight: var(--font-medium);
-  font-size: var(--normal-font-size);
+  font-weight: 600;
+  font-size: 1rem; /* Ukuran font default */
 }
+
 footer.footer-section .footer-content span {
-  font-weight: var(--font-medium);
-  font-size: var(--normal-font-size);
+  font-weight: 600;
+  font-size: 1.1rem; /* Sedikit lebih besar untuk heading */
+  color: #333; /* Warna lebih gelap untuk visibilitas */
 }
+
+footer.footer-section .footer-link {
+  list-style: none; /* Hilangkan bullet points */
+  padding-left: 0;
+}
+
+footer.footer-section .footer-link li {
+  display: flex;
+  align-items: center; /* Ikon dan teks sejajar secara vertikal */
+  margin-bottom: 0.8rem; /* Spasi antar item */
+}
+
 footer.footer-section .footer-link li a {
-  color: var(--black-color);
+  color: #333; /* Warna teks default */
+  font-size: 0.95rem; /* Ukuran font disesuaikan */
+  text-decoration: none; /* Hilangkan garis bawah */
+  margin-left: 0.8rem; /* Jarak antara ikon dan teks */
+  transition: color 0.3s ease; /* Animasi smooth saat hover */
 }
+
 footer.footer-section .footer-link li a:hover {
-  color: var(--primary-color);
+  color: var(--primary-color); /* Warna saat hover sesuai warna utama */
+}
+
+footer.footer-section .footer-link li i {
+  color: var(--primary-color); /* Warna ikon sesuai tema */
+  font-size: 1.2rem; /* Sesuaikan ukuran ikon */
+}
+
+footer.footer-section .footer-brand img {
+  height: 70px;
+  width: auto; /* Menjaga proporsi gambar */
+}
+
+.footer-content ul {
+  display: flex;
+  flex-wrap: wrap; /* Membuat teks tetap rapi dalam baris horizontal */
+  gap: 15px; /* Tambahkan jarak antar elemen */
+}
+
+.footer-content li {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsivitas untuk tampilan mobile */
+@media (max-width: 768px) {
+  footer.footer-section {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  footer.footer-section .footer-content span {
+    font-size: 1rem; /* Sesuaikan ukuran font pada layar kecil */
+  }
+
+  footer.footer-section .footer-link li a {
+    font-size: 0.9rem; /* Ukuran teks lebih kecil */
+  }
+
+  .footer-content ul {
+    flex-direction: column; /* Elemen berurutan ke bawah */
+    gap: 10px; /* Jarak antar elemen */
+  }
+}
+
+footer.footer-section .footer-link li a:hover {
+  color: var(--primary-color); /* Warna saat hover pada tautan */
 }
 footer.footer-section .copyright {
   font-size: var(--smaller-font-size);
@@ -302,7 +884,7 @@ footer.footer-section .copyright {
     margin-top: 30px;
   }
   section.menu,
-section.testimonials {
+  section.testimonials {
     padding-top: 5rem;
   }
   section.newslatter {
@@ -337,4 +919,4 @@ section.testimonials {
   footer.footer-section .col-md-7 .col-md-3 {
     margin-bottom: 15px;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
