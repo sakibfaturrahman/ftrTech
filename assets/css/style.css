@@ -145,7 +145,7 @@ a:hover {
 /* Default styles */
 .navbar-toggler {
   border: none;
-  background: transparent;
+  background: var(--primary-color);
 }
 
 .navbar-brand img {
@@ -385,9 +385,8 @@ section.newslatter {
 
 /* Styling Link dalam Card Kecil */
 .card-small a {
-  color: var(--primary-color); /* Warna teks sesuai tema */
+  color: black; /* Warna teks sesuai tema */
   text-decoration: none; /* Hilangkan garis bawah */
-  font-weight: bold;
 }
 
 .card-small a:hover {
@@ -686,7 +685,7 @@ input[type="date"] {
   width: 100%;
   background: none;
   font-size: 1rem;
-  color: #fff;
+  color: var(--primary-color);
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -758,11 +757,86 @@ button:hover {
   }
 }
 
+/* Section FAQ */
+.faq {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+.faq .faq-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.faq .accordion {
+  flex: 1;
+  max-width: 45%;
+}
+
+.accordion-button {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #ffffff; /* Warna saat hover */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Efek bayangan saat hover */
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-item {
+  background: #fff;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.accordion-body {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fffdfd;
+  color: rgb(0, 0, 0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .faq {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq .faq-text,
+  .faq .accordion {
+    max-width: 100%;
+  }
+}
+
 /* Footer */
 footer.footer-section {
   padding-top: 5rem; /* Kurangi padding untuk menghindari jarak kosong terlalu besar */
   padding-bottom: 3rem; /* Tambahkan padding bawah */
-  background-color: #f9f9f9; /* Tambahkan warna background untuk kontras */
+  background-color: #ffffff;
+  border-top: 2px solid black;
 }
 
 footer.footer-section .footer-brand span {

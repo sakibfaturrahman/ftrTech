@@ -48,7 +48,7 @@
                       <a class="nav-link" href="#marketplace">Marketplace</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">FAQ</a>
+                      <a class="nav-link" href="$faq">FAQ</a>
                   </li>
               </ul>
               <a href="#pesan-sekarang" class="shadow-none btn btn-primary ms-3">Pesan Sekarang</a>
@@ -76,7 +76,7 @@
                     <a class="nav-link" href="#marketplace">Marketplace</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">FAQ</a>
+                    <a class="nav-link" href="#faq">FAQ</a>
                 </li>
             </ul>
         </div>
@@ -390,7 +390,7 @@
                   <form id="projectWizard" action="#" method="post">
                     <!-- Step 1: Jenis Project -->
                     <div class="step" data-step="1">
-                      <h3 class="step-title">Pilih Jenis Project</h3>
+                      <h3 class="step-title">Pilih jenis proyek yang anda butuhkan</h3>
                       <div class="row justify-content-center">
                         <div class="col-md-3 mb-3">
                           <div class="card project-card" data-value="website">
@@ -425,7 +425,7 @@
                     <!-- Step 2: Deskripsi Project -->
                     <div class="step" data-step="2" style="display: none;">
                       <h3 class="step-title">Deskripsi Project</h3>
-                      <label for="projectDescription">Jelaskan Project Anda:</label>
+                      <label for="projectDescription">Ayo ceritakan seperti apa proyek yang kamu butuhkan:</label>
                       <textarea id="projectDescription" name="projectDescription" rows="4" class="form-control" required></textarea>
                       <button type="button" class="prev-step">Previous</button>
                       <button type="button" class="next-step">Next</button>
@@ -435,7 +435,7 @@
                     <div class="step" data-step="3" style="display: none;">
                     <div class="deadline-section">
                       <h3 class="step-title">Deadline Proyek</h3>
-                      <p>Kapan proyek ini harus diselesaikan?</p>
+                      <p>Kapan sih proyek ini harus diselesaikan?</p>
                     
                       <div class="deadline-options">
                         <!-- Input tanggal -->
@@ -464,11 +464,54 @@
           </div>
         </div>
       </section>
-      
-      
-    
-    <!-- Newslatter Section Close -->
+  <!-- Newslatter Section Close -->
 
+    <!-- FAQ Section Open -->
+      <section class="faq" id="faq">
+        <!-- Bagian Teks -->
+        <div class="faq-text">
+          <h2>Ada yang belum jelas? <b>Kami di sini untuk membantu!</b></h2>
+          <p>
+            Jika ada hal yang belum terjawab atau membutuhkan penjelasan lebih lanjut, jangan ragu untuk bertanya. Konsultasikan kebutuhan atau pertanyaan Anda langsung dengan kami melalui kontak yang tersedia.
+          </p>
+        </div>
+      
+        <!-- Accordion FAQ -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Berapa lama proyek joki saya dikerjakan?
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Joki tugas biasanya selesai dalam waktu 1-3 hari tergantung tingkat kesulitan.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Apakah bisa di-refund?
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Proyek yang sudah disepakati (DP sudah ditransfer) tidak dapat di-refund.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Apakah ada jatah revisi?
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Ada. Maksimal 7x revisi minor (contoh: mengubah warna, tambahan fungsionalitas sederhana, dll.)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- FAQ Section Close -->
+  
     <!-- Footer Section Open -->
     <footer class="footer-section">
         <div class="container">
@@ -491,7 +534,7 @@
                                 <ul class="mt-3 footer-link list-unstyled">
                                     <li> <i class="bx bx-shopping-bag fs-5"></i><a href="#marketplace" class="py-1 d-block">Marketplace</a></li>
                                     <li> <i class="bx bx-menu fs-5"></i><a href="#about" class="py-1 d-block">Tentang Kami</a></li>
-                                    <li> <i class="bx bx-error-circle fs-5"></i><a href="#" class="py-1 d-block">FAQ</a></li>
+                                    <li> <i class="bx bx-error-circle fs-5"></i><a href="#faq" class="py-1 d-block">FAQ</a></li>
                                 </ul>
                             </div>
                         </div>
